@@ -5,13 +5,17 @@ import { ResumeProfilesRoutingModule } from './resume-profiles-routing.module';
 import { MainProfileComponent } from './main-profile/main-profile.component';
 import { SuggestionComponent } from './suggestion/suggestion.component';
 import { TestComponent } from './test/test.component';
+import { FooterComponent } from './footer/footer.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
   declarations: [
     MainProfileComponent,
     SuggestionComponent,
-    TestComponent
+    TestComponent,
+    FooterComponent,
+    NavbarComponent
   ],
   imports: [
     CommonModule,
