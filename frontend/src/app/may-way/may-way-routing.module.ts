@@ -4,14 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { TestComponent } from './components/resume-profiles/test/test.component';
 
 const routes: Routes = [
-  {
-    path: 'cv',
-    component: MainProfileComponent,
-  },
-  {
-    path: 'test',
-    component: TestComponent,
-  },
+
 ];
 
 @NgModule({
