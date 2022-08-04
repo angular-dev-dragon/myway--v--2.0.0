@@ -2,7 +2,9 @@ $online: true;
 $shadow-ex: true;
 $three : rgb(248, 183, 3);
 $three-hover :#34f803;
-
+ .b{
+  background-color:$three ;
+ }
 $ana : true;
 .main-body {
     padding: 15px;
@@ -71,10 +73,10 @@ display: none;
 }
 
 .icons {
-  background-color: rgb(19, 157, 236);
+  background-color: $three;
     padding: 5px;
     background: #ffffff;
-    border: 1px #12affe solid transparent;
+    border: 1px $three solid transparent;
     box-shadow: 0px 2px 4px 0px rgb(36, 36, 36);
     margin-bottom: 0;
 
@@ -206,16 +208,178 @@ $online-color-1 : rgba(236, 16, 16, 0.904);
 display: block;
 }
 .Edcucation {
-display: none;
+display: block;
 }
 }@else{
 .Experince {
 display: none;
 }
 .Edcucation {
-display: block;
+display: none;
 }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.single-timeline-area {
+  position: relative;
+  z-index: 1;
+  padding-left: 160px;
+}
+
+@media only screen and (max-width: 575px) {
+  .single-timeline-area {
+    padding-left: 0px;
+  }
+}
+
+.single-timeline-area .timeline-date {
+  position: absolute;
+  width:100px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -ms-grid-row-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding-right: 60px;
+}
+
+@media only screen and (max-width: 575px) {
+  .single-timeline-area .timeline-date {
+    width: 80px;
+  }
+}
+
+.single-timeline-area .timeline-date::after {
+  position: absolute;
+  width: 3px;
+  height: 95%;
+  content: "";
+  background-color: #ebebeb;
+  top: 0;
+  right: 45px;
+  z-index: 1;
+}
+
+.single-timeline-area .timeline-date::before {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: $three;
+  content: "";
+  top: 50%;
+  right: 40px;
+  z-index: 5;
+  margin-top: -5.5px;
+}
+
+.single-timeline-area .timeline-date p {
+  margin-bottom: 0;
+  color: #020710;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.single-timeline-area .single-timeline-content {
+  position: relative;
+  z-index: 1;
+  padding: 5px 5px 5px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  -webkit-box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
+  box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
+  border: 1px solid #ebebeb;
+}
+
+@media only screen and (max-width: 575px) {
+  .single-timeline-area .single-timeline-content {
+    padding: 3px;
+  }
+}
+
+.single-timeline-area .single-timeline-content .timeline-icon {
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+  width: 0px;
+  height: 30px;
+  background-color: $three;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 30px;
+  flex: 0 0 30px;
+  text-align: center;
+  max-width: 30px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.single-timeline-area .single-timeline-content .timeline-icon i {
+  color: #ffffff;
+  line-height: 30px;
+}
+
+.single-timeline-area .single-timeline-content .timeline-text h6 {
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+}
+
+.single-timeline-area .single-timeline-content .timeline-text p {
+  font-size: 12px;
+  margin-bottom: 0;
+}
+
+.single-timeline-area .single-timeline-content:hover .timeline-icon,
+.single-timeline-area .single-timeline-content:focus .timeline-icon {
+  background-color: $three;
+}
+
+.single-timeline-area .single-timeline-content:hover .timeline-text h6,
+.single-timeline-area .single-timeline-content:focus .timeline-text h6 {
+  color: $three;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -293,11 +457,11 @@ display: block;
 }
 
 .middle-container:hover {
-  border: 1px solid #5957f9;
+  border: 1px solid $three;
 }
 
 .dollar-div {
-  background-color: #5957f9;
+  background-color: $three;
   padding: 12px;
   border-radius: 10px;
 }
@@ -315,7 +479,7 @@ display: block;
 
 .dollar {
   font-size: 16px !important;
-  color: #5957f9 !important;
+  color: $three !important;
   font-weight: bold !important;
 }
 
@@ -339,7 +503,7 @@ display: block;
 // }
 
 .recent-border {
-  border-left: 2px solid #5957f9;
+  border-left: 2px solid $three;
   display: flex;
   align-items: center;
 
@@ -352,7 +516,7 @@ display: block;
 .recent-orders {
   font-size: 16px;
   font-weight: 700;
-  color: #5957f9;
+  color: $three;
   margin-left: 2px;
 }
 
@@ -418,3 +582,158 @@ display: block;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .main-container {
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .main-container h2 {
+      margin: 0 0 80px 0;
+      color: $three;
+      font-size: 30px;
+      font-family: "Raleway", sans-serif;
+      font-weight: 400;
+    }
+
+    .radio-buttons {
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .custom-radio input {
+      display: none;
+    }
+
+    .radio-btn {
+      margin: 10px;
+      width: 150px;
+      height: 150px;
+      border: 3px solid transparent;
+      display: inline-block;
+      border-radius: 10px;
+      position: relative;
+      text-align: center;
+      box-shadow: 0 0 20px #c3c3c367;
+      cursor: pointer;
+    }
+
+    .radio-btn>i {
+      color: #ffffff;
+      background-color: $three;
+      font-size: 20px;
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%) scale(4);
+      border-radius: 50px;
+      padding: 3px;
+      transition: 0.2s;
+      pointer-events: none;
+      opacity: 0;
+    }
+
+    .radio-btn .hobbies-icon {
+      width: 70px;
+      height: 70px;
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .radio-btn .hobbies-icon i {
+      color: $three ;
+      line-height: 80px;
+      font-size: 60px;
+    }
+
+    .radio-btn .hobbies-icon h3 {
+      color: $three;
+      font-family: "Raleway", sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+
+    .custom-radio input:checked+.radio-btn {
+      border: 3px solid $three;
+    }
+
+    .custom-radio input:checked+.radio-btn>i {
+      opacity: 1;
+      transform: translateX(-50%) scale(1);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .list-group
+{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.list-group-itemM
+{
+  display: flex;
+  align-items: center;
+
+
+  border-radius: 0.25rem;
+  border: 1px solid #e9ecef;
+  margin-bottom: 0;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  i{
+   margin-top: 0;
+   margin: -5px;
+
+  }
+}
